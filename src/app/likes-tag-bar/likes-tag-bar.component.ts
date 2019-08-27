@@ -58,8 +58,7 @@ export class LikesTagBarComponent implements OnInit {
       for(let tags in count[monthadded]){
         if (likesTagCount){
           if(likesTagCount[tags]){
-            likesTagCount[tags] = []
-            likesTagCount[tags] = count[monthadded][tags]
+            likesTagCount[tags].push(count[monthadded][tags])
           } else {
             likesTagCount[tags] = []
              likesTagCount[tags].push(count[monthadded][tags])
