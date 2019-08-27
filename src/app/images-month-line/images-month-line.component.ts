@@ -19,8 +19,8 @@ export class ImagesMonthLineComponent implements OnInit {
     { data: [], label: 'Series 1' }
 
   ];
-  //  public lineChartLabels: Label[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
-   public lineChartLabels: Label[] = [];
+  
+  public lineChartLabels: Label[] = [];
   public lineChartOptions: (ChartOptions & { annotation: any }) = {
     responsive: true,
     scales: {
@@ -90,7 +90,7 @@ export class ImagesMonthLineComponent implements OnInit {
 
     let count = {}
     for(const x of imageData){
-      var dateAdd = new Date (x.dateAdded)
+      let dateAdd = new Date (x.dateAdded)
       const monthadded = dateAdd.getMonth()
       
       
